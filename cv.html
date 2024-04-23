@@ -27,17 +27,30 @@
         color: white;
     }
 
-    .cover-container{
-        height: auto;
+    .inner-info{
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 3px;
     }
-    
-    .features-container{
-      display: inline;
-      justify-content: center;
-    }
+
 
     .carousel-container{
       height: auto;
+    }
+  
+    
+
+
+    @media screen and (min-width: 800px) {
+      .cv-container{
+        display: grid;
+        grid-template-columns: 3fr 4fr ;
+        grid-template-rows: 500px;
+      }
+      .inner1-padding{
+        padding-top: 3;
+      }
+      
     }
 
   </style>
@@ -47,96 +60,96 @@
   <div class="container">
     <!-- Header -->
     <div>
-      <header class="d-flex justify-content-center p-3 mb-4">
+      <header class="d-flex justify-content-center p-3 mb-4 ">
         <h3 class="d-flex pt-1 align-items-center me-md-auto link-body-emphasis text-decoration-none">
           <span class="fs-2">LF &nbsp</span>
         </h3>
         
         <ul class="nav nav-pills">
-          <li class="nav-item"><a href="#" class="nav-link download-Btn fw-bold" style="color: black;">Download CV</a></li>
-                <li class="nav-item"><a href="index.html" class="nav-link" style="color: black;">Home</a></li>
-                <li class="nav-item"><a target="_blank" class="nav-link" href="http://www.github.com/LiadFirouz" style="color: black;">Projects</a></li>
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page" style="background-color: black;">CV</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link" style="color: black;">Home</a></li>
+          <li class="nav-item"><a target="_blank" class="nav-link" href="http://www.github.com/LiadFirouz" style="color: black;">Projects</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page" style="background-color: black;">CV</a></li>
         </ul>
       </header>
     </div>
 
-    <!-- Intro -->
-    <div style="background-color: black; color: white;">
-      <div class="top-left p-5 ">
-        <h1>Liad Firouz</h1>
-        <h4>Fullstack Developer</h4>
-        <br>
-          <p><img src="cv-images/email.png" class="top-left-icons">Liad.Firouz@gmail.com</p>
-            <p><img src="cv-images/telephone.png" class="top-left-icons">053-9803335</p>
-            <p><img src="cv-images/location.png" class="top-left-icons">Rishon LeZion, Israel</p>
-            <p><img src="cv-images/linkedin.png" class="top-left-icons">linkedin.com/in/liad-firouz</p>
-            <p><img src="cv-images/github.png" class="top-left-icons">github.com/LiadFirouz</p>
-            <p><img src="cv-images/web.png" class="top-left-icons">https://liadfirouz.github.io/Liad-Firouz-WEB-2.0/</p>               
-      </div>
-    </div>
-
     
-    <div class="p-5">
-      <!-- Summary -->
-      <div>
-        <h2>Summary</h2>
-        <p>Hi there, I am a hardworking and dedicated individual with experience in custom service and administration</p>
-      </div>
 
-      <!-- Work Experince -->
-      <div class="pt-5">
-        <h2>Work Experience</h2>
-        <br>
-        <ul>
-            <li><h5>Customer Service Representative - ABC Inc.</h5>
-            <p>June 2014 - May 2018</p>
-            <ul>
-              <li>Answered customer inquiries via phone and email</li> 
-              <li>Maintained customer records and updated account information</li>
-              <li>Resolved customer complaints and issues</li>
-            </ul>
-            </li>
+      <!-- Intro -->
+      <div class="cv-container">
+        <div style="background-color: black; color: white;">
+          <div class="top-left p-5 ">
+            <h1>Liad Firouz</h1>
+            <h4>Fullstack Developer</h4>
             <br>
-            <li><h5>Administrative Assistant - XYZ Corp.</h5>
-                <p>June 2018 - Present</p>
-                <ul>
-                    <li>Prepared reports and presentations using Microsoft Office Suite</li>
-                    <li>Managed incoming and outgoing mail and correspondence</li>
-                    <li>Assisted with scheduling appointments and meetings</li>
-                </ul>
-        </ul>
-      </div>
-    </div>
+              <p><img src="cv-images/email.png" class="top-left-icons">Liad.Firouz@gmail.com</p>
+                <p><img src="cv-images/telephone.png" class="top-left-icons">053-9803335</p>
+                <p><img src="cv-images/location.png" class="top-left-icons">Rishon LeZion, Israel</p>
+                <p><img src="cv-images/linkedin.png" class="top-left-icons">linkedin.com/in/liad-firouz</p>
+                <p><img src="cv-images/github.png" class="top-left-icons">github.com/LiadFirouz</p>
+                <p><img src="cv-images/web.png" class="top-left-icons">https://liadfirouz.github.io/Liad-Firouz-WEB-2.0/</p>               
+          </div>
+        </div>
 
-    <div class="px-5">
-      <!-- Education -->
-      <div>
-        <h2>Education</h2>
-        <ul>
-            <li>Bachelor of Arts, Business Administration - University of XYZ (2010-2014)</li>
-        </ul>
-      </div>
-      
-      <!-- Skills -->
-      <div class="pt-5">
-        <h2>Skills</h2>
-        <ul>
-            <li>Java</li>
-            <li>C#</li>
-            <li>Python</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-      </div>
+        <div class="inner1-container">
+        <!-- Summary -->
+        <div class="px-5 pt-5">
+          <h2>Summary</h2>
+          <p>Hi there, I am a hardworking and dedicated individual with experience in custom service and administration</p>
+        </div>
 
-      <!--Download button-->
+        <!-- Education -->
+        <div class="inner1-padding px-5">
+          <h2>Education</h2>
+          <ul>
+              <li>Bachelor of Arts, Business Administration - University of XYZ (2010-2014)</li>
+          </ul>
+        </div>
+
+        <!-- Skills -->
+        <div class="inner1-padding px-5">
+          <h2>Skills</h2>
+          <ul>
+              <li>Java</li>
+              <li>C#</li>
+              <li>Python</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+          </ul>
+        </div>
+      </div>
+     </div> 
+        <!-- Work Experince -->
+        <div class="px-5 pt-5 ">
+          <h2>Work Experience</h2>
+          <ul>
+              <li><h5>Customer Service Representative - ABC Inc.</h5>
+              <p>June 2014 - May 2018</p>
+              <ul>
+                <li>Answered customer inquiries via phone and email</li> 
+                <li>Maintained customer records and updated account information</li>
+                <li>Resolved customer complaints and issues</li>
+              </ul>
+              </li>
+              <br>
+              <li><h5>Administrative Assistant - XYZ Corp.</h5>
+                  <p>June 2018 - Present</p>
+                  <ul>
+                      <li>Prepared reports and presentations using Microsoft Office Suite</li>
+                      <li>Managed incoming and outgoing mail and correspondence</li>
+                      <li>Assisted with scheduling appointments and meetings</li>
+                  </ul>
+          </ul>
+        </div>
+        
+        </div>
+    
+        <!--Download button-->
       <div class="d-flex justify-content-center align-items-center p-5">
-        <button id="download" class="btn btn-lg btn-outline-dark border-white">Download As PDF</button>
-    </div>
+          <button id="download" class="btn btn-lg btn-outline-dark border-white">Download As PDF</button>
+      </div>
 
-    </div>
   </div>
  
     <!-- Footer -->
