@@ -9,26 +9,36 @@
   <!-- html2pdf.js library for PDF generation -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
-    // Wait until the DOM is fully loaded
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("download").addEventListener("click", () => {
-        const element = document.getElementById("resume");
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("download").addEventListener("click", () => {
+      const element = document.getElementById("resume");
 
-        const opt = {
-          margin: 0,
-          filename: "Liad_Firouz_Resume.pdf",
-          image: { type: "jpeg", quality: 0.98 },
-          html2canvas: { scale: 2 },
-          jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
-        };
+      const elementHeightPx = element.offsetHeight;
 
-        window.scrollTo(0, 0);
+      const pxToMm = 25.4 / 96;
+      const elementHeightMm = elementHeightPx * pxToMm;
 
-        // Generate and save the PDF
-        html2pdf().set(opt).from(element).save();
-      });
+      const a4WidthMm = 210;
+
+      const opt = {
+        margin: 0,
+        filename: "Liad_Firouz_Resume.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+        jsPDF: {
+          unit: "mm",
+          format: [a4WidthMm, elementHeightMm],
+          orientation: "portrait",
+        },
+      };
+
+      window.scrollTo(0, 0);
+
+      html2pdf().set(opt).from(element).save();
     });
-  </script>
+  });
+</script>
+
 
   <!-- Bootstrap CSS -->
   <link
@@ -40,7 +50,7 @@
 
   <style>
     .top-left a {
-      color: white !important;
+      color: rgb(255, 255, 255) !important;
       text-decoration: underline; 
     }
 
@@ -57,7 +67,7 @@
     }
 
     .text-white {
-      color: white;
+      color: rgb(22, 21, 21);
     }
 
     .inner-info {
@@ -69,17 +79,18 @@
     }
 
     .px-5.pt-5 h5 {
-      margin-top: 15px; /* רווח קטן מתחת לכותרת */
+      margin-top: 15px; 
     }
 
     #resume {
-      overflow: visible !important;
-      display: block !important;
-      height: auto !important;
-      page-break-before: auto;
-      page-break-after: auto;
-      page-break-inside: avoid;
-    }
+  page-break-before: avoid !important;
+  page-break-after: avoid !important;
+  page-break-inside: avoid !important;
+  overflow: visible !important;
+  display: block !important;
+  height: auto !important;
+}
+
 
 
 
@@ -126,108 +137,128 @@
         </ul>
       </header>
     </div>
-<div id="resume" class="container">
-      <h1 class="text-center">Liad Firouz</h1>
-      <h4 class="text-center">Fullstack Developer</h4>
-    <div class="container">
-      <!-- Intro Section -->
-      <div class="cv-container">
-        <!-- Left panel -->
-        <div style="background-color: black; color: white;">
-          <div class="top-left p-5">
-            <h1>Liad Firouz</h1>
-            <h4>Fullstack Developer</h4>
-            <br />
-            <p><img src="cv-images/email.png" class="top-left-icons" />Liad.Firouz@gmail.com</p>
-            <p><img src="cv-images/telephone.png" class="top-left-icons" />053-9803335</p>
-            <p><img src="cv-images/location.png" class="top-left-icons" />Rishon LeZion, Israel</p>
-            <p><img src="cv-images/linkedin.png" class="top-left-icons" />
-              <a href="https://www.linkedin.com/in/liad-firouz" target="_blank">linkedin.com/in/liad-firouz</a>
-            </p>
-            <p><img src="cv-images/github.png" class="top-left-icons" />
-              <a href="https://github.com/LiadFirouz" target="_blank">github.com/LiadFirouz</a>
-            </p>
-            <p><img src="cv-images/web.png" class="top-left-icons" />
-              <a href="https://liadfirouz.github.io/Liad-Firouz-WEB-2.0/" target="_blank">liadfirouz.github.io/Liad-Firouz-WEB-2.0</a>
-            </p>
-          </div>
-        </div>
 
-        <!-- Right panel -->
-        <div class="inner1-container">
-          <!-- Summary -->
-          <div class="px-5 pt-5">
-            <h2>Summary</h2>
-            <p>
-            Motivated and detail-oriented Computer Science student with a strong foundation in software engineering and hands-on experience in both customer-facing and technical roles. Proven ability to work under pressure, adapt quickly, and learn independently. Experienced in front-end development, academic projects, and military technical support. Currently expanding my skills in full-stack development and seeking opportunities to apply my knowledge in real-world environments.
-            </p>
-          </div>
+    <div id="resume" class="container">
+  <h1 class="text-center">Liad Firouz</h1>
+  <h4 class="text-center">Fullstack Developer</h4>
+  <div class="cv-container pt-3">
+    <!-- Left panel -->
+    <div style="background-color: rgba(0, 0, 0, 0.984); color: rgb(255, 255, 255); border-right: 1px solid black;">
 
-           <!-- Skills -->
-          <div class="inner1-padding px-5">
-            <h2>Skills</h2>
-            <p>Programming languages:  Java | C# | Python | HTML | CSS | JavaScript</p>
-            <p>Frameworks:  VS code | Node.js | Express.js | Bootstrap</p>
-          </div>
-
-          <!-- Language -->
-          <div class="inner1-padding px-5">
-            <h2>Language</h2>
-            <li> Hebrew - Mother tounge</li>
-            <li> English - High level</li>
-          </div> 
-
-         
-        </div>
+      <div class="top-left p-5">
+        <h2 class="text-left">Contact Information</h2>
+        <p class="inner-info">Feel free to reach out via the channels below:</p>
+        <p><img src="cv-images/email.png" class="top-left-icons" />Liad.Firouz@gmail.com</p>
+        <p><img src="cv-images/telephone.png" class="top-left-icons" />053-9803335</p>
+        <p><img src="cv-images/linkedin.png" class="top-left-icons" />
+          <a href="https://www.linkedin.com/in/liad-firouz" target="_blank">linkedin.com/in/liad-firouz</a>
+        </p>
+        <p><img src="cv-images/github.png" class="top-left-icons" />
+          <a href="https://github.com/LiadFirouz" target="_blank">github.com/LiadFirouz</a>
+        </p>
+        <p><img src="cv-images/web.png" class="top-left-icons" />
+          <a href="https://liadfirouz.github.io/Liad-Firouz-WEB-2.0/" target="_blank">liadfirouz.github.io/Liad-Firouz-WEB-2.0</a>
+        </p>
       </div>
 
-      <!-- Work Experience & Education Split View -->
-<!-- Work Experience & Education (Grid view matching left panel width) -->
-<div class="cv-container px-4 pt-5">
-  <!-- Left Panel: Education -->
-  <div style="border-right: 1px solid #000000;">
-    <h2>Education</h2>
-        <h5>B.Sc. in Computer Science – The Open University</h5>
-        <p>Oct 2022 - Present</p>
-        <ul>
-          <li>Currently pursuing a degree in Computer Science</li>
-        </ul>
-      
-        <h5>Software Engineering Technician Certificate</h5>
-        <p>Sep 2018 - May 2019</p>
-        <ul>
-          <li>Graduated successfully with a certificate in Software Engineering in Ort Singalovski</li>
-        </ul>
-        <h5>High School Diploma</h5>
-        <p>Graduated 2018</p>
-        <ul>
-          <li>Majored in Software Engineering (10 units)</li>
-          <li>Completed 5 units in English and 4 in Math</li>
-        </ul>
-    </ul>
-    
+      <div class="px-5 pt-4 text-white">
+  <h2>Skills</h2>
+<div class="row text-white px-3">
+  <div class="col-12 pb-2">
+    <span>•</span> <strong>Languages:</strong><br />
+    JavaScript, Python, Java, C#
   </div>
-
-  <!-- Right Panel: Work Experience -->
-  <div class="inner1-padding px-5">
-    <h2>Work Experience</h2>
-        <h5>Combat Support - Israeli Defense Forces (IDF)</h5>
-        <p>Jan 2020 - Sep 2022</p>
-        <ul>
-          <li>Optical tester and arc tester for the 120mm mortar system (Shizafon)</li>
-          <li>Performed technical support tasks in a combat unit</li>
-        </ul>
-        <h5>Clothing Store Employee - Tamnoon</h5>
-        <p>Jun 2017 - Jan 2020</p>
-        <ul>
-          <li>Worked in customer service and sales</li>
-          <li>Managed inventory and academic commitments</li>
-        </ul>
-      </li>
-    </ul>
+  <div class="col-12 pb-2">
+    <span>•</span> <strong>Front-End:</strong><br />
+    HTML, CSS, Bootstrap
+  </div>
+  <div class="col-12 pb-2">
+    <span>•</span> <strong>Back-End:</strong><br />
+    Node.js, Express.js
+  </div>
+  <div class="col-12 pb-2">
+    <span>•</span> <strong>Tools:</strong><br />
+    Git, GitHub, VS Code, IntelliJ IDEA
+  </div>
+  <div class="col-12">
+    <span>•</span> <strong>Soft Skills:</strong><br />
+    Teamwork, Problem-Solving, Adaptability
   </div>
 </div>
+
+      </div>
+
+      <div class="px-5 pt-5">
+        <h2>Languages</h2>
+        <ul>
+          <li>Hebrew – Native proficiency</li>
+          <li>English – Fluent</li>
+        </ul>
+      </div>
+
+      <!-- Objective -->
+<div class="px-5 pt-5">
+  <h2>Objective</h2>
+  <p>
+    Seeking a junior Full Stack Developer or software internship role where I can contribute to real-world projects,
+    continue growing my skills, and be part of a collaborative engineering team.
+  </p>
+</div>
     </div>
+
+    <!-- Right panel -->
+    <div class="inner1-container">
+      <!-- Summary -->
+      <div class="px-5 pt-5">
+        <h2>Summary</h2>
+        <p>
+
+Motivated and quick-learning Computer Science student with hands-on experience in full-stack development, academic projects, and technical support roles. Proficient in JavaScript, Java, Python, and modern web technologies. Strong analytical skills combined with a collaborative mindset and the ability to thrive in team-oriented environments. Eager to contribute to innovative development teams and gain real-world experience through a junior developer position or internship.
+
+        </p>
+      </div>
+
+      <!-- Education -->
+      <div class="px-5 pt-5">
+        <h2>Education</h2>
+        <h6><strong> in Computer Science – The Open University of Israel</strong></h6>
+        <p>Oct 2022 – Present</p>
+        <ul>
+          <li>Pursuing a B.Sc. in Computer Science with a focus on software engineering and full-stack development</li>
+        </ul>
+        <h6><strong> Engineering Technician Certificate – Ort Singalovski</strong></h6>
+        <p>Sep 2018 – May 2019</p>
+        <ul>
+          <li>Completed practical training in software engineering fundamentals</li>
+        </ul>
+        <h6><strong> School Diploma</strong></h6>
+        <p>Graduated 2018</p>
+        <ul>
+          <li>Major: Software Engineering (10 units)</li>
+          <li>English (5 units), Math (4 units)</li>
+        </ul>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="inner1-padding px-5 pt-5">
+        <h2>Work Experience</h2>
+        <h6><strong>Combat Support – Israeli Defense Forces (IDF)</strong></h6>
+        <p>Jan 2020 – Sep 2022</p>
+        <ul>
+          <li>Performed optical and arc testing for 120mm mortar systems</li>
+          <li>Provided technical support in a combat unit</li>
+        </ul>
+        <h6><strong>Sales Associate – Tamnoon</strong></h6>
+        <p>Jun 2017 – Jan 2020</p>
+        <ul>
+          <li>Delivered customer service and assisted in daily store operations</li>
+          <li>Balanced work with academic responsibilities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
   <!-- Download PDF Button -->
