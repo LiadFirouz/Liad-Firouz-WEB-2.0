@@ -15,12 +15,14 @@
         const element = document.getElementById("resume");
 
         const opt = {
-          margin: 0.5,
+          margin: 0,
           filename: "Liad_Firouz_Resume.pdf",
           image: { type: "jpeg", quality: 0.98 },
           html2canvas: { scale: 2 },
           jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
         };
+
+        window.scrollTo(0, 0);
 
         // Generate and save the PDF
         html2pdf().set(opt).from(element).save();
@@ -69,10 +71,16 @@
     .px-5.pt-5 h5 {
       margin-top: 15px; /* רווח קטן מתחת לכותרת */
     }
-    
+
     #resume {
-      overflow: visible;
+      overflow: visible !important;
+      display: block !important;
+      height: auto !important;
+      page-break-before: auto;
+      page-break-after: auto;
+      page-break-inside: avoid;
     }
+
 
 
     @media screen and (min-width: 800px) {
@@ -86,12 +94,19 @@
         padding-top: 3;
       }
     }
+
+    @media screen and (max-width: 799px) {
+  .cv-container > div:first-child {
+    border-right: none !important;
+    padding-right: 0 !important;
+  }
+}
   </style>
 </head>
 
 <body>
   <!-- Main resume container for PDF export -->
-  <div id="resume" class="container-fluid">
+  <div>
     <!-- Header -->
     <div>
       <header class="d-flex justify-content-center p-3 mb-4">
@@ -111,7 +126,9 @@
         </ul>
       </header>
     </div>
-
+<div id="resume" class="container">
+      <h1 class="text-center">Liad Firouz</h1>
+      <h4 class="text-center">Fullstack Developer</h4>
     <div class="container">
       <!-- Intro Section -->
       <div class="cv-container">
@@ -146,75 +163,72 @@
             </p>
           </div>
 
-          <!-- Education
-          <div class="inner1-padding px-5">
-            <h2>Education</h2>
-            <ul>
-              <li>
-                Bachelor of Arts, Business Administration - University of XYZ (2010–2014)
-              </li>
-            </ul>
-          </div> -->
-
-          <!-- Skills -->
+           <!-- Skills -->
           <div class="inner1-padding px-5">
             <h2>Skills</h2>
-            <ul>
-              <li>Java</li>
-              <li>C#</li>
-              <li>Python</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
+            <p>Programming languages:  Java | C# | Python | HTML | CSS | JavaScript</p>
+            <p>Frameworks:  VS code | Node.js | Express.js | Bootstrap</p>
           </div>
+
+          <!-- Language -->
+          <div class="inner1-padding px-5">
+            <h2>Language</h2>
+            <li> Hebrew - Mother tounge</li>
+            <li> English - High level</li>
+          </div> 
+
+         
         </div>
       </div>
 
-      <!-- Work Experience & Extended Education -->
-      <div class="px-5 pt-5">
-        <h2>Work Experience & Education</h2>
+      <!-- Work Experience & Education Split View -->
+<!-- Work Experience & Education (Grid view matching left panel width) -->
+<div class="cv-container px-4 pt-5">
+  <!-- Left Panel: Education -->
+  <div style="border-right: 1px solid #000000;">
+    <h2>Education</h2>
+        <h5>B.Sc. in Computer Science – The Open University</h5>
+        <p>Oct 2022 - Present</p>
         <ul>
-          <li>
-            <h5>Bachelor of Computer Science - The Open University</h5>
-            <p>October 2022 - Present</p>
-            <ul>
-              <li>Currently pursuing a degree in Computer Science</li>
-            </ul>
-          </li>
-
-          <li>
-            <h5>Combat Support - Israeli Defense Forces (IDF)</h5>
-            <p>January 2020 - September 2022</p>
-            <ul>
-              <li>Optical tester and arc tester for the 120mm mortar system (Shizafon)</li>
-              <li>Performed technical support tasks in a combat unit</li>
-            </ul>
-          </li>
-
-          <li>
-            <h5>Clothing Store Employee - Tamnoon | Software Engineering Technician Studies</h5>
-            <p>June 2017 - January 2020</p>
-            <ul>
-              <li>Worked in customer service and sales while completing a technical software engineering program (2018–2019)</li>
-              <li>Assisted customers and managed inventory alongside academic commitments</li>
-              <li>Graduated successfully with a certificate in Software Engineering</li>
-            </ul>
-          </li>
-
-          <li>
-            <h5>High School Diploma - Rishon LeZion High School</h5>
-            <p>Graduated in 2018</p>
-            <ul>
-              <li>Completed high school with a focus on science and technology</li>
-              <li>Majored in Software Engineering (10 units)</li>
-              <li>Completed 5 units in English and 4 units in Mathematics</li>
-            </ul>
-          </li>
+          <li>Currently pursuing a degree in Computer Science</li>
         </ul>
-      </div>
-    </div>
+      
+        <h5>Software Engineering Technician Certificate</h5>
+        <p>Sep 2018 - May 2019</p>
+        <ul>
+          <li>Graduated successfully with a certificate in Software Engineering in Ort Singalovski</li>
+        </ul>
+        <h5>High School Diploma</h5>
+        <p>Graduated 2018</p>
+        <ul>
+          <li>Majored in Software Engineering (10 units)</li>
+          <li>Completed 5 units in English and 4 in Math</li>
+        </ul>
+    </ul>
+    
   </div>
+
+  <!-- Right Panel: Work Experience -->
+  <div class="inner1-padding px-5">
+    <h2>Work Experience</h2>
+        <h5>Combat Support - Israeli Defense Forces (IDF)</h5>
+        <p>Jan 2020 - Sep 2022</p>
+        <ul>
+          <li>Optical tester and arc tester for the 120mm mortar system (Shizafon)</li>
+          <li>Performed technical support tasks in a combat unit</li>
+        </ul>
+        <h5>Clothing Store Employee - Tamnoon</h5>
+        <p>Jun 2017 - Jan 2020</p>
+        <ul>
+          <li>Worked in customer service and sales</li>
+          <li>Managed inventory and academic commitments</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+    </div>
+
 
   <!-- Download PDF Button -->
   <div class="d-flex justify-content-center align-items-center p-5">
