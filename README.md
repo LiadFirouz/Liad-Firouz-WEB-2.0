@@ -1,57 +1,33 @@
-# Liad Firouz WEB Project
+# 🌐 Liad Firouz – Personal Portfolio Website
 
-https://liadfirouz.github.io/Liad-Firouz-WEB-2.0/index.html
-A clean and modern personal website built with HTML and CSS.  
-This project serves as a professional portfolio or personal presentation site.
+**Live as if you were to die tomorrow.  
+Learn as if you were to live forever.**  
+– Mahatma Gandhi
+
+A clean, modern, and responsive personal website built with **HTML5**, **CSS3**, and **Bootstrap**, designed to showcase my background, skills, and experience as a fullstack developer in an elegant, professional format.
+
+📍 [View Website](https://liadfirouz.github.io/Liad-Firouz-WEB-2.0/index.html)
 
 ---
 
 ## 🔧 Technologies Used
 
-- HTML5
-- CSS3
-- *(Coming soon)* JavaScript for interactive elements
-- Frameworks
-- Bootstrap
-- VS code
+- **HTML5**
+- **CSS3**
+- **Bootstrap 5**
+- **VS Code**
+- *(Coming soon)* JavaScript interactivity
 
-
-## 🚀 Running Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/LiadFirouz/Liad-Firouz-WEB-2.0.git
+---
 
 ## SVGs:
 ![Website Preview](src/Preview1.png)
 ![Website Preview](src/Preview2.png)
 
-## Text:
+## 🚀 Getting Started
 
-Hi I'm Liad Firouz
-The best fullstack developer you will ever hire!
+To run the website locally:
 
-Familler with
-Python
-Java
-HTML
-And more ...
-
-Frameworks
-React
-Bootstrap
-VS code
-
-Qualitys
-responsible
-self-educated
-diligent
-
-“Live as if you were to die tomorrow.
-Learn as if you were to live forever”
-.Mahatma Gandhi
-
-Don't be a stranger
-get in touch
-
-
+```bash
+git clone https://github.com/LiadFirouz/Liad-Firouz-WEB-2.0.git
+cd Liad-Firouz-WEB-2.0
