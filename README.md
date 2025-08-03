@@ -23,8 +23,8 @@ This project serves as a professional portfolio or personal presentation site.
    git clone https://github.com/LiadFirouz/Liad-Firouz-WEB-2.0.git
 
 ## SVGs:
-![Website Preview](imgs/preview.png)
-
+![Website Preview](src/Preview1.png)
+![Website Preview](src/Preview2.png)
 
 ## Text:
 
