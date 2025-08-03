@@ -6,39 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Liad Firouz</title>
 
-  <!-- html2pdf.js library for PDF generation -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("download").addEventListener("click", () => {
-      const element = document.getElementById("resume");
-
-      const elementHeightPx = element.offsetHeight;
-
-      const pxToMm = 25.4 / 96;
-      const elementHeightMm = elementHeightPx * pxToMm;
-
-      const a4WidthMm = 210;
-
-      const opt = {
-        margin: 0,
-        filename: "Liad_Firouz_Resume.pdf",
-        image: { type: "jpeg", quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
-        jsPDF: {
-          unit: "mm",
-          format: [a4WidthMm, elementHeightMm],
-          orientation: "portrait",
-        },
-      };
-
-      window.scrollTo(0, 0);
-
-      html2pdf().set(opt).from(element).save();
-    });
-  });
-</script>
-
 
   <!-- Bootstrap CSS -->
   <link
@@ -263,7 +230,9 @@ Motivated and quick-learning Computer Science student with hands-on experience i
 
   <!-- Download PDF Button -->
   <div class="d-flex justify-content-center align-items-center p-5">
-    <button id="download" class="btn btn-lg btn-outline-dark fw-bold border-white">Download As PDF</button>
+    <a href="assets/Liad_Firouz_Resume.pdf" download class="btn btn-lg btn-outline-dark fw-bold border-white">
+      Download as PDF
+    </a>
   </div>
 
   <!-- Footer -->
