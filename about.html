@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta tags for character encoding and responsive viewport -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Page Title -->
   <title>About Me - Liad Firouz</title>
   
-  <!-- Bootstrap 5 CSS via CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   
-  <!-- Custom internal styles -->
   <style>
     body {
       background-color: #f8f9fa;
@@ -36,85 +31,78 @@
   </style>
 </head>
 <body>
-    <!-- Header Section Wrapper -->
-    <div>
-      <header class="d-flex justify-content-center p-3 mb-4">
-        <!-- Logo / Initials -->
-        <h3 class="d-flex pt-1 align-items-center me-md-auto link-body-emphasis text-decoration-none">
-          <span class="fs-2">LF &nbsp</span>
-        </h3>
-        
-        <!-- Navigation Menu -->
-        <ul class="nav nav-pills">
-          <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
-          <li class="nav-item"><a target="_blank" class="nav-link" href="http://www.github.com/LiadFirouz" style="color: black;">Projects</a></li>
-          <li class="nav-item"><a href="cv.html" class="nav-link" style="color: black;">CV</a></li>
-        </ul>
-      </header>
-    </div>
 
-  <!-- Main About Section Container -->
-  <div class="container about-section text-center">
-    <!-- Profile Picture -->
+  <header class="d-flex justify-content-center p-3 mb-4 border-bottom">
+    <h3 class="d-flex align-items-center me-md-auto link-body-emphasis text-decoration-none">
+      <span class="fs-2">LF&nbsp;</span>
+    </h3>
+    
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="index.html" class="nav-link text-dark">Home</a></li>
+      <li class="nav-item"><a target="_blank" class="nav-link text-dark" href="http://www.github.com/LiadFirouz">Projects</a></li>
+      <li class="nav-item"><a href="cv.html" class="nav-link text-dark">CV</a></li>
+    </ul>
+  </header>
+
+  <main class="container about-section text-center">
+    
     <img src="src/profile.jpeg" alt="Liad Firouz" class="profile-img mb-4" />
     
-    <!-- Greeting and Name -->
-    <h1>Hello, I'm <span class="highlight">Liad Firouz ;)</span></h1>
-    <br/>
+    <h1 class="mb-4">Hi, I'm Liad Firouz.</h1>
     
-    <!-- Short Biography and Tech Stack -->
-    <h5>
-      I'm a Computer Science student at the Open University of Israel with a passion for <strong>full-stack web development</strong>.
-      I have hands-on experience with technologies like <strong>JavaScript, Python, Java, C#, Node.js</strong>.
-    </h5>
-    
-    <!-- Personal Traits and Work Ethic -->
-    <p>
-      I enjoy building real-world projects, solving technical challenges, and continuously learning.
-      I’m a <strong>team player</strong> who thrives in collaborative environments and always looks for ways to improve.
-    </p>
-    
-    <!-- Current Goals / Seeking Opportunities -->
-    <p>
-      Currently, I’m seeking opportunities as a <strong>Junior Full Stack Developer</strong> or an <strong>internship</strong> to gain industry experience and contribute to exciting products.
-    </p>
+    <div class="mb-4">
+      <h5 class="fw-normal">
+        Computer Science student at The Open University, specializing in <strong>Cyber Security</strong>.
+        I bridge the gap between low-level system understanding and high-level software development.
+      </h5>
+    </div>
 
-    <!-- Action Buttons -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-8">
+        <p>
+          My technical journey started in <strong>computer and control systems engineering</strong>, 
+          giving me a deep appreciation for how hardware and software interact. 
+          This hardware-level foundation drives my current focus in <strong>Cyber Security</strong>.
+        </p>
+        <p>
+          Beyond code, I have experience as a <strong>third-grade teacher</strong>, which taught me 
+          the art of simplifying complex concepts—a skill I apply daily when building <strong>Full-Stack applications</strong> 
+          using Node.js and SQL, or when debugging C-based systems.
+        </p>
+        <p class="fw-bold">
+          I am looking for a challenging role where I can apply my analytical skills, my C-programming expertise, 
+          and my passion for secure software architecture.
+        </p>
+      </div>
+    </div>
+
     <div class="mt-4">
-      <a href="mailto:liad.firouz@gmail.com" class="btn btn-dark me-2 color-black">Contact Me</a>
+      <a href="mailto:liad.firouz@gmail.com" class="btn btn-dark me-2">Contact Me</a>
       <a href="assets/Liad_Firouz_Resume.pdf" class="btn btn-outline-primary" download>Download Resume</a>
     </div>
-  </div>
+  </main>
 
-  <!-- Footer Section Wrapper -->
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <!-- Copyright Information -->
+  <footer class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <div class="col-md-4 d-flex align-items-center">
-        <span class="mb-3 mb-md-0 text-muted">©LiadFirouz</span>
+        <span class="text-muted">©LiadFirouz 2026</span>
       </div>
       
-      <!-- Social Media Links -->
       <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
         <li class="ms-3">
           <a target="_blank" class="text-muted" href="http://www.linkedin.com/in/liad-firouz">
-            <img src="footer-images/linkedin.svg" height="30px" />
+            <img src="footer-images/linkedin.svg" width="30" height="30" alt="LinkedIn" />
           </a>
         </li>
         <li class="ms-3">
           <a target="_blank" class="text-muted" href="http://www.github.com/LiadFirouz">
-            <img src="footer-images/github.svg" height="30px" />
+            <img src="footer-images/github.svg" width="30" height="30" alt="GitHub" />
           </a>
         </li>
       </ul>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
-  <!-- Bootstrap JavaScript Bundle with Popper -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
