@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Liad Firouz</title>
+  <title>Liad Firouz - CV</title>
 
-
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap 5 CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -15,25 +14,22 @@
     crossorigin="anonymous"
   />
 
+  <!-- Custom Styles -->
   <style>
+    /* Styling for links in the left panel */
     .top-left a {
       color: rgb(255, 255, 255) !important;
       text-decoration: underline; 
     }
 
-    .lead {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
+    /* Icons inside the contact section */
     .top-left-icons {
       height: 25px;
       padding-right: 5px;
       font-size: 1rem;
     }
 
-    .text-white {
+    .text-dark-custom {
       color: rgb(22, 21, 21);
     }
 
@@ -41,232 +37,227 @@
       padding: 3px 5px 0 5px;
     }
 
-    .carousel-container {
-      height: auto;
-    }
-
-    .px-5.pt-5 h5 {
-      margin-top: 15px; 
-    }
-
+    /* Print styles for PDF export */
     #resume {
-  page-break-before: avoid !important;
-  page-break-after: avoid !important;
-  page-break-inside: avoid !important;
-  overflow: visible !important;
-  display: block !important;
-  height: auto !important;
-}
-
-
-
-
-    @media screen and (min-width: 800px) {
-      .cv-container {
-        display: grid;
-        grid-template-columns: 3fr 4fr;
-        grid-template-rows: auto;
-      }
-
-      .inner1-padding {
-        padding-top: 3;
-      }
+      page-break-before: avoid !important;
+      page-break-after: avoid !important;
+      page-break-inside: avoid !important;
+      overflow: visible !important;
+      display: block !important;
+      height: auto !important;
     }
 
-    @media screen and (max-width: 799px) {
-  .cv-container > div:first-child {
-    border-right: none !important;
-    padding-right: 0 !important;
-  }
-}
+    /* Refined Left Panel Styling */
+    .left-panel {
+      background-color: rgba(0, 0, 0, 0.984); 
+      color: rgb(255, 255, 255);
+    }
+
+    /* Only show border on desktop/tablet where panels are side-by-side */
+    @media screen and (min-width: 768px) {
+      .left-panel {
+        border-right: 1px solid black;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <!-- Main resume container for PDF export -->
+  <!-- Main wrapper -->
   <div>
-    <!-- Header -->
-    <div>
-      <header class="d-flex justify-content-center p-3 mb-4">
-        <h3 class="d-flex pt-1 align-items-center me-md-auto link-body-emphasis text-decoration-none">
-          <span class="fs-2">LF &nbsp</span>
-        </h3>
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link" style="color: black;">Home</a>
-          </li>
-          <li class="nav-item">
-            <a target="_blank" class="nav-link" href="http://www.github.com/LiadFirouz" style="color: black;">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page" style="background-color: black;">CV</a>
-          </li>
-        </ul>
-      </header>
-    </div>
-
-    <div id="resume" class="container">
-  <h1 class="text-center">Liad Firouz</h1>
-  <h4 class="text-center">Fullstack Developer</h4>
-  <div class="cv-container pt-3">
-    <!-- Left panel -->
-    <div style="background-color: rgba(0, 0, 0, 0.984); color: rgb(255, 255, 255); border-right: 1px solid black;">
-
-      <div class="top-left p-5">
-        <h2 class="text-left">Contact Information</h2>
-        <p class="inner-info">Feel free to reach out via the channels below:</p>
-        <p><img src="cv-images/email.png" class="top-left-icons" />Liad.Firouz@gmail.com</p>
-        <p><img src="cv-images/telephone.png" class="top-left-icons" />053-9803335</p>
-        <p><img src="cv-images/linkedin.png" class="top-left-icons" />
-          <a href="https://www.linkedin.com/in/liad-firouz" target="_blank">linkedin.com/in/liad-firouz</a>
-        </p>
-        <p><img src="cv-images/github.png" class="top-left-icons" />
-          <a href="https://github.com/LiadFirouz" target="_blank">github.com/LiadFirouz</a>
-        </p>
-        <p><img src="cv-images/web.png" class="top-left-icons" />
-          <a href="https://liadfirouz.github.io/Liad-Firouz-WEB-2.0/" target="_blank">liadfirouz.github.io/Liad-Firouz-WEB-2.0</a>
-        </p>
-      </div>
-
-      <div class="px-5 pt-4 text-white">
-  <h2>Skills</h2>
-<div class="row text-white px-3">
-  <div class="col-12 pb-2">
-    <span>•</span> <strong>Languages:</strong><br />
-    JavaScript, Python, Java, C#
-  </div>
-  <div class="col-12 pb-2">
-    <span>•</span> <strong>Front-End:</strong><br />
-    HTML, CSS, Bootstrap
-  </div>
-  <div class="col-12 pb-2">
-    <span>•</span> <strong>Back-End:</strong><br />
-    Node.js, Express.js
-  </div>
-  <div class="col-12 pb-2">
-    <span>•</span> <strong>Tools:</strong><br />
-    Git, GitHub, VS Code, IntelliJ IDEA
-  </div>
-  <div class="col-12">
-    <span>•</span> <strong>Soft Skills:</strong><br />
-    Teamwork, Problem-Solving, Adaptability
-  </div>
-</div>
-
-      </div>
-
-      <div class="px-5 pt-5">
-        <h2>Languages</h2>
-        <ul>
-          <li>Hebrew – Native proficiency</li>
-          <li>English – Fluent</li>
-        </ul>
-      </div>
-
-      <!-- Objective -->
-<div class="px-5 pt-5">
-  <h2>Objective</h2>
-  <p>
-    Seeking a junior Full Stack Developer or software internship role where I can contribute to real-world projects,
-    continue growing my skills, and be part of a collaborative engineering team.
-  </p>
-</div>
-    </div>
-
-    <!-- Right panel -->
-    <div class="inner1-container">
-      <!-- Summary -->
-      <div class="px-5 pt-5">
-        <h2>Summary</h2>
-        <p>
-
-Motivated and quick-learning Computer Science student with hands-on experience in full-stack development, academic projects, and technical support roles. Proficient in JavaScript, Java, Python, and modern web technologies. Strong analytical skills combined with a collaborative mindset and the ability to thrive in team-oriented environments. Eager to contribute to innovative development teams and gain real-world experience through a junior developer position or internship.
-
-        </p>
-      </div>
-
-      <!-- Education -->
-      <div class="px-5 pt-5">
-        <h2>Education</h2>
-        <h6><strong>Computer Science Student – The Open University</strong></h6>
-        <p>Oct 2022 – Present | Second-Year Student</p>
-
-        <ul>
-          <li>Pursuing a B.Sc. in Computer Science with a focus on software engineering and full-stack development</li>
-        </ul>
-        <h6><strong> Engineering Technician Certificate – Ort Singalovski</strong></h6>
-        <p>Sep 2018 – May 2019</p>
-        <ul>
-          <li>Completed practical training in software engineering fundamentals</li>
-        </ul>
-        <h6><strong> School Diploma</strong></h6>
-        <p>Graduated 2018</p>
-        <ul>
-          <li>Major: Software Engineering (10 units)</li>
-          <li>English (5 units), Math (4 units)</li>
-        </ul>
-      </div>
-
-      <!-- Military Service -->
-      <div class="inner1-padding px-5 pt-5">
-        <h2>Military Service </h2>
-        <h6><strong>Combat Support – Israeli Defense Forces (IDF)</strong></h6>
-        <p>Jan 2020 – Sep 2022</p>
-        <ul>
-          <li>Performed optical and arc testing for 120mm mortar systems</li>
-          <li>Provided technical support in a combat unit</li>
-        </ul>
-      </div>
-
-      <!-- Work Experience -->
-      <div class="inner1-padding px-5 pt-5">
-        <h2>Work Experience</h2>
-        <h6><strong>Sales Associate – Tamnoon</strong></h6>
-        <p>Jun 2017 – Jan 2020</p>
-        <ul>
-          <li>Delivered customer service and assisted in daily store operations</li>
-          <li>Balanced work with academic responsibilities</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-  <!-- Download PDF Button -->
-  <div class="d-flex justify-content-center align-items-center p-5">
-    <a href="assets/Liad_Firouz_Resume.pdf" download class="btn btn-lg btn-outline-dark fw-bold border-white">
-      Download as PDF
-    </a>
-  </div>
-
-  <!-- Footer -->
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <span class="mb-3 mb-md-0 text-muted">©LiadFirouz</span>
-      </div>
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3">
-          <a target="_blank" class="text-muted" href="http://www.linkedin.com/in/liad-firouz">
-            <img src="footer-images/linkedin.svg" height="30px" />
-          </a>
+    <!-- Navigation Header -->
+    <header class="d-flex justify-content-center p-3 mb-4">
+      <h3 class="d-flex pt-1 align-items-center me-md-auto link-body-emphasis text-decoration-none">
+        <span class="fs-2">LF &nbsp;</span>
+      </h3>
+      
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link text-dark">Home</a>
         </li>
-        <li class="ms-3">
-          <a target="_blank" class="text-muted" href="http://www.github.com/LiadFirouz">
-            <img src="footer-images/github.svg" height="30px" />
-          </a>
+        <li class="nav-item">
+          <a target="_blank" class="nav-link text-dark" href="http://www.github.com/LiadFirouz">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active bg-dark" aria-current="page">CV</a>
         </li>
       </ul>
-    </footer>
-  </div>
+    </header>
 
-  <!-- Bootstrap JS -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
+    <!-- Resume Content Container -->
+    <div id="resume" class="container mb-5">
+      <h1 class="text-center">Liad Firouz</h1>
+      <h4 class="text-center text-muted">B.Sc. CS Student | Cyber Security Specialization & Fullstack Dev</h4>
+      
+      <!-- Bootstrap Grid applied here instead of Custom CSS Grid -->
+      <div class="row pt-4">
+        
+        <!-- Left Panel -->
+        <div class="col-md-5 col-lg-4 left-panel p-4 p-md-5">
+          <!-- Contact Information -->
+          <div class="top-left mb-4">
+            <h2>Contact Information</h2>
+            <p class="inner-info">Feel free to reach out via the channels below:</p>
+            <p><img src="cv-images/email.png" class="top-left-icons" /> Liad.Firouz@gmail.com</p>
+            <p><img src="cv-images/telephone.png" class="top-left-icons" /> 053-9803335</p>
+            <!-- text-break prevents long URLs from overflowing on mobile -->
+            <p class="text-break"><img src="cv-images/linkedin.png" class="top-left-icons" />
+              <a href="https://www.linkedin.com/in/liad-firouz" target="_blank">linkedin.com/in/liad-firouz</a>
+            </p>
+            <p class="text-break"><img src="cv-images/github.png" class="top-left-icons" />
+              <a href="https://github.com/LiadFirouz" target="_blank">github.com/LiadFirouz</a>
+            </p>
+            <p class="text-break"><img src="cv-images/web.png" class="top-left-icons" />
+              <a href="https://liadfirouz.github.io/Liad-Firouz-WEB-2.0/" target="_blank">Portfolio Website</a>
+            </p>
+          </div>
+
+          <!-- Skills Section -->
+          <div class="mb-4">
+            <h2>Skills</h2>
+            <ul class="list-unstyled">
+              <li class="pb-2"><strong>Languages:</strong><br />C, JavaScript, Python, Java, C#</li>
+              <li class="pb-2"><strong>Web Technologies:</strong><br />Node.js, Express.js, HTML, CSS, Bootstrap</li>
+              <li class="pb-2"><strong>Databases & Architecture:</strong><br />SQL (PostgreSQL), Data Structures</li>
+              <li class="pb-2"><strong>Tools & Environment:</strong><br />Git, GitHub, VS Code, Linux</li>
+            </ul>
+          </div>
+
+          <!-- Languages Section -->
+          <div class="mb-4">
+            <h2>Languages</h2>
+            <ul>
+              <li>Hebrew – Native proficiency</li>
+              <li>English – Fluent</li>
+            </ul>
+          </div>
+
+          <!-- Objective Statement -->
+          <div class="mb-2">
+            <h2>Objective</h2>
+            <p>
+              Seeking a junior role or internship in Cyber Security or Software Development. 
+              Eager to leverage my low-level programming knowledge and full-stack capabilities 
+              to solve complex problems within a collaborative engineering team.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="col-md-7 col-lg-8 p-4 p-md-5 bg-white border border-start-0">
+          
+          <!-- Professional Summary -->
+          <div class="mb-5">
+            <h2>Summary</h2>
+            <p>
+              Motivated Computer Science student specializing in Cyber Security, with hands-on experience in 
+              both systems programming and full-stack web development. Proficient in C, Java, and modern web 
+              technologies, with a strong foundation in database architecture and version control. 
+              Possesses a technical background in computer and control systems, combining deep analytical 
+              problem-solving with a collaborative team-oriented approach.
+            </p>
+          </div>
+
+          <!-- Education Section -->
+          <div class="mb-5">
+            <h2>Education</h2>
+            <div class="mb-3">
+              <h6 class="fw-bold">Computer Science Student – The Open University</h6>
+              <p class="text-muted mb-1">Oct 2022 – Present | Second-Year Student</p>
+              <ul>
+                <li>Pursuing a B.Sc. in Computer Science</li>
+                <li><strong>Specialization:</strong> Cyber Security</li>
+                <li><strong>Relevant Coursework:</strong> Linear Algebra, Database Systems, Data Structures</li>
+              </ul>
+            </div>
+
+            <div>
+              <h6 class="fw-bold">Engineering Technician Certificate – Ort Singalovski</h6>
+              <p class="text-muted mb-1">Sep 2018 – May 2019</p>
+              <ul>
+                <li>Completed practical training in software engineering fundamentals</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Technical Projects -->
+          <div class="mb-5">
+            <h2>Technical Projects</h2>
+            <h6 class="fw-bold">Custom Assembler Implementation (C Language)</h6>
+            <ul>
+              <li>Engineered a fully functional assembler project using C.</li>
+              <li>Managed memory allocation, bitwise operations, and file handling for input/output processing.</li>
+              <li>Maintained robust version control and project iterations utilizing Git.</li>
+            </ul>
+          </div>
+
+          <!-- Military Service -->
+          <div class="mb-5">
+            <h2>Military Service</h2>
+            <h6 class="fw-bold">Combat Support – Israeli Defense Forces (IDF)</h6>
+            <p class="text-muted mb-1">Jan 2020 – Sep 2022</p>
+            <ul>
+              <li>Performed optical and arc testing for 120mm mortar systems</li>
+              <li>Provided technical support in a combat unit</li>
+            </ul>
+          </div>
+
+          <!-- Work Experience -->
+          <div class="mb-2">
+            <h2>Work Experience</h2>
+            <div class="mb-3">
+              <h6 class="fw-bold">Technical Technician - Computer & Control Systems</h6>
+              <ul>
+                <li>Provided hands-on technical support and system maintenance.</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h6 class="fw-bold">Primary Education Teacher (Third Grade)</h6>
+              <ul>
+                <li>Developed pedagogical plans and fostered strong communication skills in a dynamic environment.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Download PDF Button -->
+    <div class="d-flex justify-content-center align-items-center p-5 bg-light">
+      <a href="assets/Liad_Firouz_Resume.pdf" download class="btn btn-lg btn-outline-dark fw-bold">
+        Download as PDF
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-muted">©LiadFirouz</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a target="_blank" class="text-muted" href="http://www.linkedin.com/in/liad-firouz">
+              <img src="footer-images/linkedin.svg" height="30px" />
+            </a>
+          </li>
+          <li class="ms-3">
+            <a target="_blank" class="text-muted" href="http://www.github.com/LiadFirouz">
+              <img src="footer-images/github.svg" height="30px" />
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </div>
 </body>
 </html>
