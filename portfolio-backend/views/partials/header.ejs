@@ -1,0 +1,20 @@
+<header class="d-flex justify-content-center p-3 mb-4 border-bottom">
+    <h3 class="d-flex pt-1 align-items-center me-md-auto link-body-emphasis text-decoration-none">
+      <span class="fs-2">LF &nbsp;</span>
+    </h3>
+    
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a href="/" class="nav-link <%= activePage === 'home' ? 'active bg-dark text-white' : 'text-dark' %>">Home</a>
+      </li>
+      <li class="nav-item">
+        <a target="_blank" class="nav-link text-dark" href="http://www.github.com/LiadFirouz">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a href="/cv" class="nav-link <%= activePage === 'cv' ? 'active bg-dark text-white' : 'text-dark' %>">CV</a>
+      </li>
+      <li class="nav-item">
+        <a href="/about" class="nav-link <%= activePage === 'about' ? 'active bg-dark text-white' : 'text-dark' %>">About</a>
+      </li>
+    </ul>
+  </header>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <title>Liad Firouz - Portfolio</title>
+  <%- include('partials/head') %>
+  
+  <style>
+    .lead {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-white {
+        color: white;
+    }
+
+    /* Ensuring project cards have identical heights and buttons align to the bottom */
+    .card-body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mt-auto {
+        margin-top: auto;
+    }
+    
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <%- include('partials/header') %>
+
+  <main style="height: auto; min-height: 300px;">
+    <div class="d-grid py-5 px-3">
+
+      <div class="container text-center mb-4">
+        <img src="/src/profile.jpeg" alt="Liad Firouz" class="profile-img" />
+      </div>
+
+      <h1 class="text-center">Hello, I'm Liad Firouz ;)</h1>
+
+      <p class="lead text-center fw-medium mt-2">
+        ⧼ B.Sc. Computer Science Student | Cyber Security Specialization & Software Development ⧽
+      </p>
+      
+      <div class="d-flex justify-content-center mt-3">
+        <a href="/cv" class="btn btn-lg btn-outline-dark fw-bold m-3">View My CV →</a>
+        <a href="/about" class="btn btn-lg btn-dark fw-bold m-3">About Me →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <div style="background-color: black; color: white;">
+    <div class="container px-4 py-5" id="hanging-icons">
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 row-cols-md-3 row-cols-sm-2 d-flex justify-content-center">
+        
+        <div class="col d-flex justify-content-center">
+          <div class="icon-square d-inline-flex fs-4 me-3">
+            <img src="/home-images/cpu.png" alt="Tech Stack" height="30px">
+          </div>
+          <div>
+            <h3 class="fs-2">Tech Stack</h3>
+            <p>C, JavaScript, Python</p>
+            <p>Java, C#, SQL</p>
+          </div>
+        </div>
+
+        <div class="col d-flex justify-content-center">
+          <div class="icon-square d-inline-flex fs-4 me-3">
+            <img src="/home-images/framework.png" alt="Frameworks" height="30px">
+          </div> 
+          <div>
+            <h3 class="fs-2">Tools & Env</h3>
+            <p>Node.js, Express.js</p>
+            <p>Git, Linux</p>
+            <p>Bootstrap, VS Code</p>
+          </div>
+        </div>
+
+        <div class="col d-flex justify-content-center">
+          <div class="icon-square d-inline-flex me-3">
+            <img src="/home-images/check.png" alt="Qualities" height="30px">
+          </div>
+          <div>
+            <h3 class="fs-2">Soft Skills</h3>
+            <p>Analytical Thinker</p>
+            <p>Self-learner</p>
+            <p>Team player</p>
+            <p>Adaptable & Motivated</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="album bg-body-tertiary">
+    <div class="container pb-5">
+      <h1 class="d-flex justify-content-center pt-5 pb-4 text-center">Take a look at my projects</h1>
+      
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <div class="bg-dark text-white d-flex justify-content-center align-items-center" style="height: 225px;">
+              <span class="fs-4">C Assembler</span>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold">Custom Assembler (C Language)</h6>
+              <p class="card-text">
+                A robust, two-pass assembler built entirely in <strong>C</strong>. Features dynamic memory allocation, bitwise operations, and comprehensive file handling for compiling assembly code into machine-readable format.
+              </p>
+              <div class="mt-auto d-flex justify-content-center pt-3">
+                <a href="http://www.github.com/LiadFirouz" target="_blank" class="btn btn-sm btn-outline-dark border-black">
+                  See Project On Github →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="/home-images/Stock-Predictor-img.png" class="card-img-top" style="object-fit: cover; height: 225px;" alt="Stock Predictor">            
+            <div class="card-body">
+              <h6 class="fw-bold">Stock Price Prediction</h6>
+              <p class="card-text">
+                A machine learning project that predicts future stock prices using historical data. Built with <strong>Python, data science libraries, and regression models</strong> to analyze market trends.
+              </p>
+              <div class="mt-auto d-flex justify-content-center pt-3">
+                <a href="https://github.com/LiadFirouz/StockPricePrediction" target="_blank" class="btn btn-sm btn-outline-dark border-black">
+                  See Project On Github →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="/home-images/simon-game-img.png" class="card-img-top" style="object-fit: cover; height: 225px;" alt="Simon Game">            
+            <div class="card-body">
+              <h6 class="fw-bold">Simon Game</h6>
+              <p class="card-text">
+                A classic memory game where players repeat increasingly long sequences. Built with <strong>HTML, CSS, and JavaScript</strong> to demonstrate DOM manipulation and interactive logic.
+              </p>
+              <div class="mt-auto d-flex justify-content-center pt-3">
+                <a href="https://liadfirouz.github.io/Simon-Game/" target="_blank" class="btn btn-sm btn-outline-dark border-black">
+                  See Project On Github →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div style="background-color: black; color: white;">
+    <div class="text-center shadow-sm d-flex flex-column justify-content-center align-items-center" style="height: 300px;">
+      <div class="p-4">
+        <h2 class="fst-italic mb-3">“Live as if you were to die tomorrow. Learn as if you were to live forever.”</h2>
+        <p class="text-end text-muted pe-md-5" style="color: white;">— Mahatma Gandhi</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 text-center mb-5 bg-light">
+    <h1 class="mb-3">Don't be a stranger</h1>
+    <p class="lead mb-4">Let's get in touch</p>
+    <a href="mailto:liad.firouz@gmail.com" class="btn btn-lg btn-dark fw-bold px-5">Email Me</a>
+  </div>
+  
+  <div class="container">
+    <%- include('partials/footer') %>
+  </div>
+
+</body>
+</html>
